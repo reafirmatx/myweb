@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reafirma Spa - Landing Page</title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,7 +42,8 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        img {
+        /* Optimización global para imágenes y videos */
+        img, video {
             max-width: 100%;
             height: auto;
             display: block;
@@ -56,9 +58,9 @@
             background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
-            align-items: flex-end; /* Coloca los botones más abajo en la sección */
+            align-items: flex-end; 
             justify-content: center;
-            padding: 60px 20px 100px; /* Margen inferior para que respiren los botones */
+            padding: 60px 20px 40px; /* Se redujo el padding inferior para bajar más los botones */
         }
 
         .hero-layout {
@@ -193,7 +195,7 @@
             height: 350px;
         }
 
-        /* --- SECCIÓN VIDEO --- */
+        /* --- SECCIÓN VIDEO PRINCIPAL --- */
         .video-container-section {
             position: relative;
             width: 100%;
@@ -325,7 +327,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 35px; /* Espacio elegante entre la imagen mockup y el botón */
+            gap: 35px;
         }
 
         .catalogo-img {
@@ -458,7 +460,7 @@
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
-                padding: 60px 20px 120px; /* Ajuste inferior en pantallas grandes */
+                padding: 60px 20px 50px; /* Ajustado para mantenerlos abajo en pantallas grandes */
             }
             .hero-layout {
                 align-items: center; 
@@ -518,17 +520,20 @@
 </head>
 <body>
 
+    <!-- CONTROL DE AUDIO FLOTANTE -->
     <div class="audio-player-widget">
         <button class="audio-btn" id="audioToggle" onclick="toggleAudio()">▶</button>
         <span class="audio-text">Música de fondo</span>
     </div>
 
+    <!-- ELEMENTO DE AUDIO CON AUTOPLAY ACTIVADO -->
     <audio id="bg-audio" loop autoplay>
         <source src="Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
         <source src="audio/Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-layout">
             <div class="hero-buttons">
@@ -539,8 +544,13 @@
         </div>
     </section>
 
+    <!-- CONÓCENOS SECTION (AHORA CON VIDEO EN BUCLE SIN AUDIO) -->
     <section class="conocenos" id="conocenos">
-        <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
+        <video class="conocenos-img" autoplay muted loop playsinline>
+            <source src="VID-20250704-WA0159.mp4" type="video/mp4">
+            <source src="video/VID-20250704-WA0159.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
         <div class="conocenos-content">
             <h2 class="section-title-italics">Conócenos</h2>
             <p>Reafirma Spa, es un espacio donde realmente puedas desconectar para volver a conectar contigo.</p>
@@ -550,6 +560,7 @@
         </div>
     </section>
 
+    <!-- MISIÓN SECTION (AHORA CON VIDEO EN BUCLE SIN AUDIO) -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
@@ -558,9 +569,14 @@
             <p>Nos enfocamos en las necesidades reales de tu piel, tu cuerpo, estética y descanso.</p>
             <p>Queremos que salgas renovada y lista para comerte el mundo de nuevo.</p>
         </div>
-        <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
+        <video class="mision-img" autoplay muted loop playsinline>
+            <source src="VID-20240209-WA0029.mp4" type="video/mp4">
+            <source src="video/VID-20240209-WA0029.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
     </section>
 
+    <!-- SECCIÓN DE VÍDEO PRINCIPAL -->
     <section class="video-container-section">
         <iframe 
             src="https://www.youtube.com/embed/ZOlPzpTOv1E?autoplay=1&mute=1&loop=1&playlist=ZOlPzpTOv1E&controls=1&rel=0" 
@@ -570,6 +586,7 @@
         </iframe>
     </section>
 
+    <!-- DETALLES DE SERVICIOS -->
     <section class="servicios-detalles" id="experiencias">
         <div class="servicios-detalles-container">
             <h2 class="servicios-detalles-header">Servicios Premium</h2>
@@ -603,6 +620,7 @@
         </div>
     </section>
 
+    <!-- SERVICIOS TABLE SECTION -->
     <section class="servicios">
         <h2 class="servicios-header">Menú de Precios</h2>
         
@@ -647,6 +665,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN CATÁLOGO -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
             <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
@@ -654,6 +673,7 @@
         </div>
     </section>
 
+    <!-- FOOTER / CONTACTO -->
     <footer class="footer-contacto" id="contacto">
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
@@ -680,6 +700,7 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
         </div>
     </footer>
 
+    <!-- SCRIPT PARA CONTROLAR EL AUDIO -->
     <script>
         var audio = document.getElementById("bg-audio");
         var btn = document.getElementById("audioToggle");
@@ -694,16 +715,13 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             }
         }
 
-        // Script inteligente para saltar restricciones de autoplay del navegador
         window.addEventListener('DOMContentLoaded', function() {
-            // Intenta reproducir directo
             var playPromise = audio.play();
 
             if (playPromise !== undefined) {
                 playPromise.then(function() {
                     btn.innerText = "⏸";
                 }).catch(function(error) {
-                    // Si el navegador bloqueó el inicio automático, se activa al primer clic o interacción táctil
                     btn.innerText = "▶";
                     document.addEventListener('click', function startOnInteraction() {
                         audio.play();
