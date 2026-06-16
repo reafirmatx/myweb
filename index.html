@@ -60,7 +60,7 @@
 
         .logo-icon {
             width: 70px;
-            margin: 0auto 15px;
+            margin: 0 auto 15px;
             filter: invert(1);
         }
 
@@ -377,6 +377,7 @@
             max-width: 400px;
         }
 
+        /* BOTÓN DE CONTACTO ACTUALIZADO CON EFECTO HOVER AVANZADO */
         .btn-fill {
             font-family: var(--font-sans);
             font-size: 0.85rem;
@@ -387,13 +388,17 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: opacity 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .btn-fill:hover {
-            opacity: 0.9;
+            background-color: #4a1a28; /* Un tono vino más profundo y sofisticado */
+            transform: translateY(-3px); /* Efecto sutil de elevación */
+            box-shadow: 0 10px 20px rgba(99, 37, 55, 0.3); /* Sombra suave con tono de la marca */
+            letter-spacing: 3px; /* Expansión sutil del texto al pasar el cursor */
         }
 
         .info-col {
@@ -587,7 +592,7 @@
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
             <p>¿Lista para escapar? Te estamos esperando. Llama, envía un mensaje de texto o haz clic abajo; nosotros te ayudaremos a encontrar el momento ideal para tu visita.</p>
-            <a href="mailto:helloreafirma@gmail.com" class="btn-fill">Contactar</a>
+            <a href="https://wa.link/ttnval" target="_blank" rel="noopener noreferrer" class="btn-fill">Contactar</a>
         </div>
         
         <div class="info-col">
