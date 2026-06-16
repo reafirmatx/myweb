@@ -88,7 +88,7 @@
         }
 
         .hero-logo {
-            max-width: 240px;
+            max-width: 260px;
             width: 100%;
             height: auto;
             object-fit: contain;
@@ -498,11 +498,14 @@
                 justify-content: space-between;
                 gap: 50px;
             }
+            /* Lado izquierdo y derecho ocupando el 50% exacto de la pantalla */
             .hero-left, .hero-right {
                 width: 50%;
+                flex: 0 0 50%;
             }
             .hero-logo {
-                max-width: 420px;
+                max-width: 440px; /* Tamaño ideal y estético para el logo */
+                width: 90%;
             }
             .hero-chicas {
                 max-height: 60vh;
@@ -579,7 +582,7 @@
         <div class="hero-layout">
             
             <div class="hero-split">
-                <!-- Lado Izquierdo: Logo -->
+                <!-- Lado Izquierdo (50% de ancho): Logo con ruta alternativa -->
                 <div class="hero-left">
                     <picture>
                         <source srcset="Logo de reafirma-15.png">
@@ -587,7 +590,7 @@
                     </picture>
                 </div>
                 
-                <!-- Lado Derecho: Imagen Chicas -->
+                <!-- Lado Derecho (50% de ancho): Imagen Chicas con ruta alternativa -->
                 <div class="hero-right">
                     <picture>
                         <source srcset="CHICAS.png">
@@ -605,7 +608,7 @@
         </div>
     </section>
 
-    <!-- CONÓCENOS SECTION (CON EL VIDEO DE MISIÓN ASIGNADO) -->
+    <!-- CONÓCENOS SECTION -->
     <section class="conocenos" id="conocenos">
         <video class="conocenos-img" autoplay muted loop playsinline>
             <source src="VID-20240209-WA0029.mp4" type="video/mp4">
@@ -621,7 +624,7 @@
         </div>
     </section>
 
-    <!-- MISIÓN SECTION (CON NUEVO VIDEO DE EDICIÓN ASIGNADO) -->
+    <!-- MISIÓN SECTION -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
@@ -655,7 +658,7 @@
             <div class="servicios-detalles-grid">
                 <div class="detalle-bloque">
                     <h3>Tratamientos Faciales</h3>
-                    <p>Cuidar tu rostro es salud y un acto de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
+                    <p>Cuidar tu rostro es salud y un act o de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
                 </div>
                 
                 <div class="detalle-bloque">
