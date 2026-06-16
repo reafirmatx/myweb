@@ -87,16 +87,18 @@
             align-items: center;
         }
 
+        /* Proporción aumentada un 20% (Base original: 260px -> Nueva: 312px) */
         .hero-logo {
-            max-width: 260px;
+            max-width: 312px;
             width: 100%;
             height: auto;
             object-fit: contain;
         }
 
+        /* Proporción aumentada un 20% (Base original: 42vh -> Nueva: 50.4vh) */
         .hero-chicas {
             max-width: 100%;
-            max-height: 42vh; 
+            max-height: 50.4vh; 
             width: auto;
             height: auto;
             object-fit: contain;
@@ -448,6 +450,29 @@
             font-weight: 300;
         }
 
+        /* Botón de Redes Sociales con Hover */
+        .btn-social-ig {
+            display: inline-block;
+            margin-top: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--primary-wine);
+            background: transparent;
+            border: 1px solid var(--primary-wine);
+            padding: 6px 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-social-ig:hover {
+            background-color: var(--primary-wine);
+            color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(92, 37, 56, 0.15);
+        }
+
         /* --- CONTROL DE AUDIO FLOTANTE --- */
         .audio-player-widget {
             position: fixed;
@@ -488,6 +513,120 @@
             font-weight: 500;
         }
 
+        /* --- VENTANA EMERGENTE MÍSTICA (MODAL) --- */
+        .modal-magic-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .modal-magic-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Diseño artístico basado en la estética celestial de la imagen image_dc3bee.jpg */
+        .modal-magic-content {
+            background: radial-gradient(circle at top, #e3edff 0%, #fdf0e6 45%, #fadcd5 85%, #f2e6ff 100%);
+            padding: 50px 40px;
+            width: 90%;
+            max-width: 480px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            animation: modalFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .modal-magic-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: #6e5243;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-magic-close:hover {
+            color: var(--primary-wine);
+        }
+
+        .modal-magic-title {
+            font-family: var(--font-serif);
+            document-font-size: 3.5rem;
+            font-size: 3.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: #5c4335; 
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .modal-magic-text {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4a3b32;
+            font-weight: 500;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-magic-thanks {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-style: italic;
+            font-weight: 400;
+            color: #5c4335;
+            margin-bottom: 35px;
+        }
+
+        .modal-magic-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--primary-wine);
+            color: #ffffff;
+            font-family: var(--font-sans);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 0px;
+            box-shadow: 0 4px 15px rgba(92, 37, 56, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .modal-magic-btn:hover {
+            background-color: #421826;
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(92, 37, 56, 0.4);
+        }
+
+        @keyframes modalFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
@@ -498,17 +637,18 @@
                 justify-content: space-between;
                 gap: 50px;
             }
-            /* Lado izquierdo y derecho ocupando el 65% exacto de la pantalla */
             .hero-left, .hero-right {
                 width: 50%;
                 flex: 0 0 50%;
             }
+            /* Proporción de escritorio aumentada un 20% (Base original: 440px -> Nueva: 528px) */
             .hero-logo {
-                max-width: 440px; /* Tamaño ideal y estético para el logo */
+                max-width: 528px; 
                 width: 90%;
             }
+            /* Proporción de escritorio aumentada un 20% (Base original: 60vh -> Nueva: 72vh) */
             .hero-chicas {
-                max-height: 60vh;
+                max-height: 72vh;
             }
             .hero-buttons {
                 margin-top: 10px;
@@ -582,7 +722,7 @@
         <div class="hero-layout">
             
             <div class="hero-split">
-                <!-- Lado Izquierdo (65% de ancho): Logo con ruta alternativa -->
+                <!-- Lado Izquierdo: Logo ampliado -->
                 <div class="hero-left">
                     <picture>
                         <source srcset="logo.png">
@@ -590,7 +730,7 @@
                     </picture>
                 </div>
                 
-                <!-- Lado Derecho (65% de ancho): Imagen Chicas con ruta alternativa -->
+                <!-- Lado Derecho: Imagen Chicas ampliada -->
                 <div class="hero-right">
                     <picture>
                         <source srcset="CHICAS.png">
@@ -647,7 +787,7 @@
             title="Video Reafirma Spa" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
-        </iframe>
+        stream
     </section>
 
     <!-- DETALLES DE SERVICIOS -->
@@ -658,7 +798,7 @@
             <div class="servicios-detalles-grid">
                 <div class="detalle-bloque">
                     <h3>Tratamientos Faciales</h3>
-                    <p>Cuidar tu rostro es salud y un act o de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
+                    <p>Cuidar tu rostro es salud y un acto de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
                 </div>
                 
                 <div class="detalle-bloque">
@@ -754,7 +894,8 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             
             <div class="info-block">
                 <h4>Redes Sociales</h4>
-                <p>@reafirmaspa</p>
+                <!-- Botón de Instagram con efecto Hover solicitado -->
+                <a href="http://instagram.com/reafirmaspa/" target="_blank" rel="noopener noreferrer" class="btn-social-ig">@reafirmaspa</a>
             </div>
             
             <div class="info-block">
@@ -769,7 +910,24 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
         </div>
     </footer>
 
-    <!-- SCRIPT PARA CONTROLAR EL AUDIO -->
+    <!-- INTERFAZ DE LA VENTANA EMERGENTE (MODAL) -->
+    <div id="magicModal" class="modal-magic-overlay">
+        <div class="modal-magic-content">
+            <button class="modal-magic-close" onclick="closeMagicModal()">&times;</button>
+            <h2 class="modal-magic-title">Universo</h2>
+            <p class="modal-magic-text">
+                Atrae a mí las herramientas sagradas<br>
+                que elevate mi vibración, limpien mi energía<br>
+                y enciendan la magia que ya habita en mi interior.
+            </p>
+            <h3 class="modal-magic-thanks">Gracias, Gracias, Gracias</h3>
+            <a href="https://wa.me/c/5212471384262" target="_blank" rel="noopener noreferrer" class="modal-magic-btn">
+                Despierta tu magia aquí 🔮
+            </a>
+        </div>
+    </div>
+
+    <!-- SCRIPTS DE CONTROL (AUDIO Y VENTANA EMERGENTE) -->
     <script>
         var audio = document.getElementById("bg-audio");
         var btn = document.getElementById("audioToggle");
@@ -798,6 +956,30 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
                         document.removeEventListener('click', startOnInteraction);
                     }, { once: true });
                 });
+            }
+
+            // Temporizador automático de 3 segundos para la ventana emergente
+            setTimeout(function() {
+                var modal = document.getElementById('magicModal');
+                if (modal) {
+                    modal.classList.add('active');
+                }
+            }, 3000);
+        });
+
+        // Funciones del Modal
+        function closeMagicModal() {
+            var modal = document.getElementById('magicModal');
+            if (modal) {
+                modal.classList.remove('active');
+            }
+        }
+
+        // Cierre al dar clic fuera del recuadro
+        window.addEventListener('click', function(e) {
+            var modal = document.getElementById('magicModal');
+            if (e.target === modal) {
+                modal.classList.remove('active');
             }
         });
     </script>
