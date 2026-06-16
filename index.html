@@ -42,7 +42,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Optimización global para imágenes y videos */
         img, video {
             max-width: 100%;
             height: auto;
@@ -87,7 +86,7 @@
             align-items: center;
         }
 
-        /* Proporción aumentada un 20% (Base original: 260px -> Nueva: 312px) */
+        /* Proporción aumentada un 20% (Base: 260px -> Nueva: 312px) */
         .hero-logo {
             max-width: 312px;
             width: 100%;
@@ -95,7 +94,7 @@
             object-fit: contain;
         }
 
-        /* Proporción aumentada un 20% (Base original: 42vh -> Nueva: 50.4vh) */
+        /* Proporción aumentada un 20% (Base: 42vh -> Nueva: 50.4vh) */
         .hero-chicas {
             max-width: 100%;
             max-height: 50.4vh; 
@@ -450,16 +449,18 @@
             font-weight: 300;
         }
 
-        /* Botón de Redes Sociales con Hover */
+        /* Botón de Redes Sociales con Hover Dinámico */
         .btn-social-ig {
-            display: inline-block;
-            margin-top: 4px;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 6px;
             font-family: var(--font-sans);
             font-size: 0.85rem;
+            font-weight: 500;
             color: var(--primary-wine);
             background: transparent;
             border: 1px solid var(--primary-wine);
-            padding: 6px 16px;
+            padding: 8px 18px;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
@@ -470,7 +471,7 @@
             background-color: var(--primary-wine);
             color: var(--text-light);
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(92, 37, 56, 0.15);
+            box-shadow: 0 6px 15px rgba(92, 37, 56, 0.2);
         }
 
         /* --- CONTROL DE AUDIO FLOTANTE --- */
@@ -536,7 +537,7 @@
             pointer-events: auto;
         }
 
-        /* Diseño artístico basado en la estética celestial de la imagen image_dc3bee.jpg */
+        /* Paleta inspirada artísticamente en el cielo celestial de image_dc3bee.jpg */
         .modal-magic-content {
             background: radial-gradient(circle at top, #e3edff 0%, #fdf0e6 45%, #fadcd5 85%, #f2e6ff 100%);
             padding: 50px 40px;
@@ -567,7 +568,6 @@
 
         .modal-magic-title {
             font-family: var(--font-serif);
-            document-font-size: 3.5rem;
             font-size: 3.5rem;
             font-weight: 400;
             font-style: italic;
@@ -641,12 +641,12 @@
                 width: 50%;
                 flex: 0 0 50%;
             }
-            /* Proporción de escritorio aumentada un 20% (Base original: 440px -> Nueva: 528px) */
+            /* Escalado de escritorio aumentado un 20% (Base: 440px -> Nueva: 528px) */
             .hero-logo {
                 max-width: 528px; 
                 width: 90%;
             }
-            /* Proporción de escritorio aumentada un 20% (Base original: 60vh -> Nueva: 72vh) */
+            /* Escalado de escritorio aumentado un 20% (Base: 60vh -> Nueva: 72vh) */
             .hero-chicas {
                 max-height: 72vh;
             }
@@ -787,7 +787,7 @@
             title="Video Reafirma Spa" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
-        stream
+        </iframe>
     </section>
 
     <!-- DETALLES DE SERVICIOS -->
@@ -889,12 +889,12 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
         <div class="info-col">
             <div class="info-block">
                 <h4>Dirección</h4>
-                <p>Limites de Yancuitlalpan 218<br>Huamantla, Tlax.</p>
+                <p>Límites de Yancuitlalpan 218<br>Huamantla, Tlax.</p>
             </div>
             
             <div class="info-block">
                 <h4>Redes Sociales</h4>
-                <!-- Botón de Instagram con efecto Hover solicitado -->
+                <!-- Botón solicitado enlazado a tu Instagram -->
                 <a href="http://instagram.com/reafirmaspa/" target="_blank" rel="noopener noreferrer" class="btn-social-ig">@reafirmaspa</a>
             </div>
             
@@ -904,20 +904,20 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             </div>
             
             <div class="info-block">
-                <h4>Telefono</h4>
+                <h4>Teléfono</h4>
                 <p>247 138 42 62</p>
             </div>
         </div>
     </footer>
 
-    <!-- INTERFAZ DE LA VENTANA EMERGENTE (MODAL) -->
+    <!-- INTERFAZ DE LA VENTANA EMERGENTE (MODAL ESPIRITUAL) -->
     <div id="magicModal" class="modal-magic-overlay">
         <div class="modal-magic-content">
             <button class="modal-magic-close" onclick="closeMagicModal()">&times;</button>
             <h2 class="modal-magic-title">Universo</h2>
             <p class="modal-magic-text">
                 Atrae a mí las herramientas sagradas<br>
-                que elevate mi vibración, limpien mi energía<br>
+                que eleven mi vibración, limpien mi energía<br>
                 y enciendan la magia que ya habita en mi interior.
             </p>
             <h3 class="modal-magic-thanks">Gracias, Gracias, Gracias</h3>
@@ -927,7 +927,7 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
         </div>
     </div>
 
-    <!-- SCRIPTS DE CONTROL (AUDIO Y VENTANA EMERGENTE) -->
+    <!-- SCRIPTS DE INTERACCIÓN COMPLETOS -->
     <script>
         var audio = document.getElementById("bg-audio");
         var btn = document.getElementById("audioToggle");
@@ -958,7 +958,7 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
                 });
             }
 
-            // Temporizador automático de 3 segundos para la ventana emergente
+            // Desparador exacto de 3 segundos para el Modal
             setTimeout(function() {
                 var modal = document.getElementById('magicModal');
                 if (modal) {
@@ -967,7 +967,7 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             }, 3000);
         });
 
-        // Funciones del Modal
+        // Controles de cierre manual del Modal
         function closeMagicModal() {
             var modal = document.getElementById('magicModal');
             if (modal) {
@@ -975,7 +975,6 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             }
         }
 
-        // Cierre al dar clic fuera del recuadro
         window.addEventListener('click', function(e) {
             var modal = document.getElementById('magicModal');
             if (e.target === modal) {
