@@ -12,7 +12,7 @@
     
     <style>
         :root {
-            --primary-wine: #5c2538; /* Color vino de marca exacto */
+            --primary-wine: #5c2538; 
             --dark-bg: #0e0e0f;
             --light-bg: #ffffff;
             --soft-gray: #f9f6f7;
@@ -65,15 +65,6 @@
             margin-bottom: 20px;
         }
 
-        /* Estilo optimizado para el nuevo logo en formato PNG */
-        .logo-icon {
-            width: auto;
-            height: 70px;
-            margin: 0 auto 15px;
-            display: block;
-            object-fit: contain;
-        }
-
         .hero-title {
             font-family: var(--font-serif);
             color: var(--text-light);
@@ -88,16 +79,35 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            max-width: 900px;
+            max-width: 1100px;
             margin: auto;
+        }
+
+        /* Contenedor para alinear Logo Grande e Imagen Actual */
+        .hero-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        /* Ajuste de tamaño premium para el Logo Izquierdo */
+        .logo-hero-side {
+            width: 100%;
+            max-width: 280px; /* Tamaño significativamente más grande */
+            height: auto;
+            object-fit: contain;
         }
 
         .hero-image-container {
             width: 100%;
+            max-width: 650px;
             height: 350px;
             overflow: hidden;
             border-radius: 2px;
-            margin-bottom: 30px;
         }
 
         .hero-image-container img {
@@ -106,7 +116,6 @@
             object-position: center 20%;
         }
 
-        /* Bloque de botones bajo la primera imagen */
         .hero-buttons {
             display: flex;
             gap: 15px;
@@ -189,7 +198,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            max-width: 500px;
+            max-width: 550px;
             margin: 0 auto;
         }
 
@@ -217,9 +226,11 @@
         }
 
         .mision-content p {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: var(--primary-wine);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         .mision-img {
@@ -322,38 +333,28 @@
             font-weight: 600;
         }
 
-        /* --- CATALOGO MOCKUP --- */
+        /* --- NUEVA SECCIÓN CATÁLOGO CON IMAGEN RELATIVA --- */
         .catalogo-section {
             background-color: var(--soft-gray);
             padding: 60px 20px;
-        }
-
-        .catalogo-container {
-            max-width: 600px;
-            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
         }
 
-        .mockup-book {
-            background-color: #fff;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            padding: 15px;
+        .catalogo-container-new {
+            max-width: 500px;
             width: 100%;
-            max-width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .mockup-book .book-cover {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 40px 20px;
-            height: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+        .catalogo-img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
         }
 
         /* --- FOOTER / CONTACTO --- */
@@ -443,11 +444,19 @@
             .hero-title {
                 font-size: 3rem;
             }
-            .hero-image-container {
-                height: 480px;
+            /* Alinear logo a la izquierda de la imagen actual */
+            .hero-content-wrapper {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
             }
-            .hero-buttons {
-                gap: 20px;
+            .logo-hero-side {
+                max-width: 340px; /* Mayor presencia visual en desktop */
+            }
+            .hero-image-container {
+                height: 440px;
+                flex: 1;
             }
             .conocenos {
                 flex-direction: row;
@@ -503,18 +512,20 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-header">
-            <!-- Reemplazo de SVG por la ruta del archivo de imagen solicitada -->
-            <img class="logo-icon" src="Logo de reafirma-15.png" alt="Logo Reafirma Spa">
             <h1 class="hero-title">Reafirma Spa</h1>
         </div>
         
         <div class="hero-main">
-            <!-- Primera Imagen -->
-            <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
+            <!-- Contenedor Flex: Logo Grande a la Izquierda + Imagen Actual a la Derecha -->
+            <div class="hero-content-wrapper">
+                <img class="logo-hero-side" src="Logo de reafirma-15.png" alt="Logo Grande Reafirma Spa">
+                
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
+                </div>
             </div>
             
-            <!-- Botones estratégicamente ubicados BAJO la primera imagen -->
+            <!-- Botones Bajo el Bloque Visual -->
             <div class="hero-buttons">
                 <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
                 <a href="#" onclick="abrirServiciosDetalle(event)" class="btn-outline">Servicios</a>
@@ -535,14 +546,15 @@
         </div>
     </section>
 
-    <!-- MISIÓN SECTION -->
+    <!-- MISIÓN SECTION (TEXTO ACTUALIZADO) -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
             <div class="divider-line"></div>
-            <p>Brindar bienestar integral mente-cuerpo en un espacio seguro, sano y con un trato digno de ti.</p>
-            <p>Nos enfocamos en las necesidades reales de tu piel, tu cuerpo, estética y descanso.</p>
-            <p>Queremos que salgas renovada y lista para comerte el mundo de nuevo.</p>
+            <!-- Nuevo Bloque de Copy Solicitado -->
+            <p>Es que te sientas bien en tu piel, combinando tecnología avanzada con un toque personal para ofrecer resultados visibles.</p>
+            <p>Nos enfocamos en tus necesidades, ya sea moldear tu figura, revitalizar tu rostro o aliviar tensiones.</p>
+            <p>Queremos que salgas renovada y lista para mostrar tu mejor versión al mundo.</p>
         </div>
         <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
     </section>
@@ -603,17 +615,10 @@
         </div>
     </section>
 
-    <!-- CATALOGO MOCKUP SECTION -->
+    <!-- SECCIÓN CATÁLOGO ACTUALIZADA CON RUTA RELATIVA -->
     <section class="catalogo-section">
-        <div class="catalogo-container">
-            <div style="opacity: 0.5; font-size: 1.2rem;">🌾</div>
-            <div class="mockup-book">
-                <div class="book-cover">
-                    <span style="font-family: var(--font-serif); letter-spacing: 2px; font-size: 1.1rem;">REAFIRMA</span>
-                    <div style="font-size: 0.6rem; letter-spacing: 3px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 8px; width: 65px; text-align: center;">CATÁLOGO</div>
-                </div>
-            </div>
-            <div style="opacity: 0.5; font-size: 1.2rem;">🌿</div>
+        <div class="catalogo-container-new">
+            <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
         </div>
     </section>
 
