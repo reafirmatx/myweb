@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reafirma Spa - Landing Page</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -57,15 +56,14 @@
             background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-end; /* Coloca los botones más abajo en la sección */
             justify-content: center;
-            padding: 60px 20px;
+            padding: 60px 20px 100px; /* Margen inferior para que respiren los botones */
         }
 
         .hero-layout {
             width: 100%;
             max-width: 1200px;
-            margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center; 
@@ -324,8 +322,10 @@
             max-width: 950px; 
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 35px; /* Espacio elegante entre la imagen mockup y el botón */
         }
 
         .catalogo-img {
@@ -368,7 +368,7 @@
             font-size: 0.95rem;
             color: #444;
             font-weight: 300;
-            white-space: pre-line; /* Mantiene el salto de línea solicitado */
+            white-space: pre-line; 
         }
 
         .btn-fill {
@@ -458,10 +458,10 @@
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
-                padding: 60px 100px;
+                padding: 60px 20px 120px; /* Ajuste inferior en pantallas grandes */
             }
             .hero-layout {
-                align-items: center; /* Centrado absoluto al no tener logo */
+                align-items: center; 
                 justify-content: center;
             }
             .hero-buttons {
@@ -518,20 +518,17 @@
 </head>
 <body>
 
-    <!-- CONTROL DE AUDIO FLOTANTE -->
     <div class="audio-player-widget">
         <button class="audio-btn" id="audioToggle" onclick="toggleAudio()">▶</button>
         <span class="audio-text">Música de fondo</span>
     </div>
 
-    <!-- AUDIO ELEMENT -->
-    <audio id="bg-audio" loop>
+    <audio id="bg-audio" loop autoplay>
         <source src="Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
         <source src="audio/Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-layout">
             <div class="hero-buttons">
@@ -542,7 +539,6 @@
         </div>
     </section>
 
-    <!-- CONÓCENOS SECTION -->
     <section class="conocenos" id="conocenos">
         <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
         <div class="conocenos-content">
@@ -554,19 +550,17 @@
         </div>
     </section>
 
-    <!-- MISIÓN SECTION -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
             <div class="divider-line"></div>
-            <p>Es que te sientas bien en tu piel, combinando tecnología avanzada con un toque personal para ofrecer resultados visibles.</p>
-            <p>Nos enfocamos en tus necesidades, ya sea moldear tu figura, revitalizar tu rostro o aliviar tensiones.</p>
-            <p>Queremos que salgas renovada y lista para mostrar tu mejor versión al mundo.</p>
+            <p>Brindar bienestar integral mente-cuerpo en un espacio seguro, sano y con un trato digno de ti.</p>
+            <p>Nos enfocamos en las necesidades reales de tu piel, tu cuerpo, estética y descanso.</p>
+            <p>Queremos que salgas renovada y lista para comerte el mundo de nuevo.</p>
         </div>
         <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
     </section>
 
-    <!-- SECCIÓN DE VÍDEO -->
     <section class="video-container-section">
         <iframe 
             src="https://www.youtube.com/embed/ZOlPzpTOv1E?autoplay=1&mute=1&loop=1&playlist=ZOlPzpTOv1E&controls=1&rel=0" 
@@ -576,7 +570,6 @@
         </iframe>
     </section>
 
-    <!-- DETALLES ANTES DE LA TABLA DE PRECIOS -->
     <section class="servicios-detalles" id="experiencias">
         <div class="servicios-detalles-container">
             <h2 class="servicios-detalles-header">Servicios Premium</h2>
@@ -610,7 +603,6 @@
         </div>
     </section>
 
-    <!-- SERVICIOS TABLE SECTION -->
     <section class="servicios">
         <h2 class="servicios-header">Menú de Precios</h2>
         
@@ -655,14 +647,13 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
             <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-fill">Ver catálogo</a>
         </div>
     </section>
 
-    <!-- FOOTER / CONTACTO -->
     <footer class="footer-contacto" id="contacto">
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
@@ -689,11 +680,11 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
         </div>
     </footer>
 
-    <!-- SCRIPT PARA CONTROLAR EL AUDIO -->
     <script>
+        var audio = document.getElementById("bg-audio");
+        var btn = document.getElementById("audioToggle");
+
         function toggleAudio() {
-            var audio = document.getElementById("bg-audio");
-            var btn = document.getElementById("audioToggle");
             if (audio.paused) {
                 audio.play();
                 btn.innerText = "⏸";
@@ -702,6 +693,26 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
                 btn.innerText = "▶";
             }
         }
+
+        // Script inteligente para saltar restricciones de autoplay del navegador
+        window.addEventListener('DOMContentLoaded', function() {
+            // Intenta reproducir directo
+            var playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(function() {
+                    btn.innerText = "⏸";
+                }).catch(function(error) {
+                    // Si el navegador bloqueó el inicio automático, se activa al primer clic o interacción táctil
+                    btn.innerText = "▶";
+                    document.addEventListener('click', function startOnInteraction() {
+                        audio.play();
+                        btn.innerText = "⏸";
+                        document.removeEventListener('click', startOnInteraction);
+                    }, { once: true });
+                });
+            }
+        });
     </script>
 
 </body>
