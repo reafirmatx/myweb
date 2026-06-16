@@ -65,11 +65,13 @@
             margin-bottom: 20px;
         }
 
+        /* Estilo optimizado para el nuevo logo en formato PNG */
         .logo-icon {
-            width: 60px;
-            height: 60px;
+            width: auto;
+            height: 70px;
             margin: 0 auto 15px;
             display: block;
+            object-fit: contain;
         }
 
         .hero-title {
@@ -104,7 +106,7 @@
             object-position: center 20%;
         }
 
-        /* Contenedor Flex para los tres botones */
+        /* Bloque de botones bajo la primera imagen */
         .hero-buttons {
             display: flex;
             gap: 15px;
@@ -389,7 +391,6 @@
             font-weight: 300;
         }
 
-        /* Botón de WhatsApp con Hover avanzado */
         .btn-fill {
             font-family: var(--font-sans);
             font-size: 0.85rem;
@@ -502,19 +503,18 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-header">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1">
-                <path d="M12 22C12 22 19 17 19 12C19 7 12 2 12 2C12 2 5 7 5 12C5 17 12 22 12 22Z"/>
-                <path d="M12 18C14.2091 18 16 16.2091 16 14C16 11.7909 14.2091 10 12 10C9.79086 10 8 11.7909 8 14C8 16.2091 9.79086 18 12 18Z"/>
-            </svg>
+            <!-- Reemplazo de SVG por la ruta del archivo de imagen solicitada -->
+            <img class="logo-icon" src="Logo de reafirma-15.png" alt="Logo Reafirma Spa">
             <h1 class="hero-title">Reafirma Spa</h1>
         </div>
         
         <div class="hero-main">
+            <!-- Primera Imagen -->
             <div class="hero-image-container">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
             </div>
             
-            <!-- Bloque de 3 Botones Solicitados -->
+            <!-- Botones estratégicamente ubicados BAJO la primera imagen -->
             <div class="hero-buttons">
                 <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
                 <a href="#" onclick="abrirServiciosDetalle(event)" class="btn-outline">Servicios</a>
@@ -528,7 +528,6 @@
         <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
         <div class="conocenos-content">
             <h2 class="section-title-italics">Conócenos</h2>
-            <!-- Texto Exacto Actualizado -->
             <p>Reafirma Spa, es un espacio donde realmente puedas desconectar para volver a conectar contigo.</p>
             <p>Sabemos que el día a día puede ser agotador, por eso hemos diseñado un ambiente lleno de energía positiva y calma, donde cada detalle está pensado en ti.</p>
             <p>No somos solo un centro de estética; somos ese paréntesis en tu semana donde vienes a soltar el estrés, recargar pilas y recibir un cuidado honesto.</p>
@@ -644,7 +643,7 @@
         </div>
     </footer>
 
-    <!-- LÓGICA DE DETALLE DE SERVICIOS PARA NUEVA PESTAÑA -->
+    <!-- INTERACTIVIDAD DE PESTAÑA NUEVA PARA TEXTO DE SERVICIOS -->
     <script>
         function abrirServiciosDetalle(event) {
             event.preventDefault();
