@@ -12,7 +12,7 @@
     
     <style>
         :root {
-            --primary-wine: #5c2538; /* Color vino exacto de tu imagen */
+            --primary-wine: #5c2538; /* Color vino de marca exacto */
             --dark-bg: #0e0e0f;
             --light-bg: #ffffff;
             --soft-gray: #f9f6f7;
@@ -27,6 +27,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -100,23 +104,36 @@
             object-position: center 20%;
         }
 
+        /* Contenedor Flex para los tres botones */
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
         .btn-outline {
             font-family: var(--font-sans);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-light);
             background: transparent;
             border: 1px solid var(--text-light);
-            padding: 12px 40px;
+            padding: 12px 24px;
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
             text-decoration: none;
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            min-width: 150px;
         }
 
         .btn-outline:hover {
             background-color: var(--text-light);
             color: var(--dark-bg);
+            transform: translateY(-2px);
         }
 
         /* --- CONÓCENOS SECTION --- */
@@ -152,7 +169,8 @@
             font-size: 0.95rem;
             margin-bottom: 20px;
             letter-spacing: 0.5px;
-            opacity: 0.9;
+            opacity: 0.93;
+            text-align: justify;
         }
 
         /* --- MISIÓN SECTION --- */
@@ -371,7 +389,7 @@
             font-weight: 300;
         }
 
-        /* --- ESTILO DE BOTÓN "CONTACTAR" EXACTO A TU IMAGEN --- */
+        /* Botón de WhatsApp con Hover avanzado */
         .btn-fill {
             font-family: var(--font-sans);
             font-size: 0.85rem;
@@ -379,7 +397,7 @@
             background-color: var(--primary-wine);
             border: none;
             padding: 16px 45px;
-            letter-spacing: 3px; /* Espaciado elegante de las letras */
+            letter-spacing: 3px;
             text-transform: uppercase;
             cursor: pointer;
             text-decoration: none;
@@ -387,12 +405,11 @@
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Efecto Hover Avanzado y Fluido */
         .btn-fill:hover {
-            background-color: #3d1421; /* Se vuelve un tono vino más oscuro y lujoso */
-            transform: translateY(-2px); /* Elevación sutil */
-            box-shadow: 0 10px 20px rgba(92, 37, 56, 0.25); /* Sombra elegante */
-            letter-spacing: 4px; /* Expansión orgánica del texto */
+            background-color: #3d1421; 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 20px rgba(92, 37, 56, 0.25); 
+            letter-spacing: 4px; 
         }
 
         .info-col {
@@ -417,7 +434,7 @@
             font-weight: 300;
         }
 
-        /* --- MEDIA QUERIES (RESPONSIVO MÓVIL / ESCRITORIO) --- */
+        /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
                 padding: 50px;
@@ -427,6 +444,9 @@
             }
             .hero-image-container {
                 height: 480px;
+            }
+            .hero-buttons {
+                gap: 20px;
             }
             .conocenos {
                 flex-direction: row;
@@ -493,19 +513,26 @@
             <div class="hero-image-container">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
             </div>
-            <a href="#contacto" class="btn-outline">Conócenos</a>
+            
+            <!-- Bloque de 3 Botones Solicitados -->
+            <div class="hero-buttons">
+                <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
+                <a href="#" onclick="abrirServiciosDetalle(event)" class="btn-outline">Servicios</a>
+                <a href="#conocenos" class="btn-outline">Conócenos</a>
+            </div>
         </div>
     </section>
 
     <!-- CONÓCENOS SECTION -->
-    <section class="conocenos">
+    <section class="conocenos" id="conocenos">
         <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
         <div class="conocenos-content">
             <h2 class="section-title-italics">Conócenos</h2>
-            <p>Aquí encontrarás un espacio donde reactivamos tus sentidos para conectar contigo misma.</p>
-            <p>Creamos experiencias personalizadas para asegurar que encuentres un momento lleno de energía positiva y calma, donde cada detalle esté pensado en ti.</p>
-            <p>Más que un centro de estética, somos tus aliadas en la búsqueda de la armonía, confianza y salud que multiplicará tu bienestar humano.</p>
-            <p>¡Es el momento ideal de regalarte la atención que mereces! Déjanos consentirte de la mano de expertas que se comprometen con cada mujer.</p>
+            <!-- Texto Exacto Actualizado -->
+            <p>Reafirma Spa, es un espacio donde realmente puedas desconectar para volver a conectar contigo.</p>
+            <p>Sabemos que el día a día puede ser agotador, por eso hemos diseñado un ambiente lleno de energía positiva y calma, donde cada detalle está pensado en ti.</p>
+            <p>No somos solo un centro de estética; somos ese paréntesis en tu semana donde vienes a soltar el estrés, recargar pilas y recibir un cuidado honesto.</p>
+            <p>Aquí te recibimos con los brazos abiertos y la empatía que mereces, asegurándonos de que desde el primer minuto te sientas en confianza y relajada.</p>
         </div>
     </section>
 
@@ -595,15 +622,14 @@
     <footer class="footer-contacto" id="contacto">
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
-            <p>¿Lista para escapar? Te estamos esperando. Haz clic en contactar y nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto.</p>
-            <!-- El enlace abre WhatsApp directamente en una nueva pestaña -->
+            <p>¿Lista para escapar? Te estamos esperando. Llama, envía un mensaje de texto o haz clic abajo; nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto.</p>
             <a href="https://wa.link/ttnval" target="_blank" rel="noopener noreferrer" class="btn-fill">Contactar</a>
         </div>
         
         <div class="info-col">
             <div class="info-block">
                 <h4>Dirección</h4>
-                <p>Limites de Yancuitlalpan 218<br>Huamantla, Tlax.</p>
+                <p>Limias de Yancuitlalpan 218<br>Huamantla, Tlax.</p>
             </div>
             
             <div class="info-block">
@@ -613,10 +639,90 @@
             
             <div class="info-block">
                 <h4>Email</h4>
-                <p>helloreafirmatx@gmail.com</p>
+                <p>helloreafirma@gmail.com</p>
             </div>
         </div>
     </footer>
+
+    <!-- LÓGICA DE DETALLE DE SERVICIOS PARA NUEVA PESTAÑA -->
+    <script>
+        function abrirServiciosDetalle(event) {
+            event.preventDefault();
+            const ventanaServicios = window.open('', '_blank');
+            ventanaServicios.document.write(`
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Nuestros Servicios - Reafirma Spa</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+                    <style>
+                        body {
+                            font-family: 'Montserrat', sans-serif;
+                            background-color: #ffffff;
+                            color: #2d2d2d;
+                            line-height: 1.7;
+                            padding: 60px 20px;
+                        }
+                        .container {
+                            max-width: 700px;
+                            margin: 0 auto;
+                        }
+                        h1 {
+                            font-family: 'Cormorant Garamond', serif;
+                            color: #5c2538;
+                            text-align: center;
+                            text-transform: uppercase;
+                            letter-spacing: 4px;
+                            font-size: 2.6rem;
+                            font-weight: 300;
+                            margin-bottom: 50px;
+                        }
+                        h2 {
+                            font-family: 'Cormorant Garamond', serif;
+                            color: #5c2538;
+                            font-size: 1.8rem;
+                            font-weight: 400;
+                            margin-top: 40px;
+                            margin-bottom: 12px;
+                            border-bottom: 1px solid #f0e6e8;
+                            padding-bottom: 6px;
+                        }
+                        p {
+                            font-size: 0.98rem;
+                            color: #444;
+                            font-weight: 300;
+                            text-align: justify;
+                            margin-bottom: 25px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <h1>Servicios Premium</h1>
+                        
+                        <h2>Tratamientos Faciales</h2>
+                        <p>Cuidar tu rostro es salud y un acto de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
+                        
+                        <h2>Depilación (Láser y con Cera)</h2>
+                        <p>Sentirte libre y cómoda en tu propia piel te aporta una inyección inmediata de seguridad diaria. Redefinimos esta experiencia con métodos suaves, eficaces y sin dolor que cuidan tu cuerpo para que te olvides por fin de las rutinas tediosas.</p>
+                        
+                        <h2>Tratamientos Corporales (Reafirmante, Detox y Moldeadores)</h2>
+                        <p>Tu cuerpo merece liberar toxinas y recuperar la firmeza que el estrés y el tiempo le quitan. Combinamos aparatología de vanguardia y protocolos integrales que moldean tu silueta, potenciando la versión más segura y espectacular de ti.</p>
+                        
+                        <h2>Masajes Relajantes y Terapéuticos</h2>
+                        <p>Pausar el ritmo diario para aliviar la tensión muscular es vital para mantener tu equilibrio emocional y físico. Creamos una atmósfera de desconexión total con técnicas expertas que resetean tu mente y te devuelven una ligereza absoluta.</p>
+                        
+                        <h2>Servicios de Belleza (Uñas, Pedi y Keratinas)</h2>
+                        <p>Un cabello radiante y unas manos impecables proyectan tu cuidado personal y elevan tu actitud al instante. Cuidamos cada detalle con estándares premium para consentirte y realzar esa belleza natural que te hace brillar con luz propia.</p>
+                    </div>
+                </body>
+                </html>
+            `);
+            ventanaServicios.document.close();
+        }
+    </script>
 
 </body>
 </html>
