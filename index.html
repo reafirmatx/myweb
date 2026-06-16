@@ -52,15 +52,12 @@
 
         /* --- HERO SECTION --- */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Diseño sin título (4).png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #000000; 
             min-height: 100vh;
             display: flex;
-            align-items: flex-end; 
+            align-items: center; 
             justify-content: center;
-            padding: 60px 20px 40px; /* Se redujo el padding inferior para bajar más los botones */
+            padding: 40px 20px 30px; 
         }
 
         .hero-layout {
@@ -69,7 +66,40 @@
             display: flex;
             flex-direction: column;
             align-items: center; 
+            justify-content: space-between;
+            min-height: calc(100vh - 70px);
+        }
+
+        .hero-split {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
             justify-content: center;
+            width: 100%;
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        .hero-left, .hero-right {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hero-chicas {
+            max-width: 100%;
+            max-height: 42vh; 
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
 
         .hero-buttons {
@@ -79,6 +109,7 @@
             justify-content: center; 
             width: 100%;
             max-width: 600px;
+            margin-top: 25px;
         }
 
         .btn-outline {
@@ -212,7 +243,7 @@
             border: 0;
         }
 
-        /* --- DETALLES DE SERVICIOS INTEGRADA --- */
+        /* --- DETALLES DE SERVICIOS --- */
         .servicios-detalles {
             background-color: var(--soft-gray);
             padding: 80px 20px 40px;
@@ -460,14 +491,24 @@
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
-                padding: 60px 20px 50px; /* Ajustado para mantenerlos abajo en pantallas grandes */
+                padding: 50px 20px 40px; 
             }
-            .hero-layout {
-                align-items: center; 
-                justify-content: center;
+            .hero-split {
+                flex-direction: row; 
+                justify-content: space-between;
+                gap: 50px;
+            }
+            .hero-left, .hero-right {
+                width: 50%;
+            }
+            .hero-logo {
+                max-width: 420px;
+            }
+            .hero-chicas {
+                max-height: 60vh;
             }
             .hero-buttons {
-                justify-content: center;
+                margin-top: 10px;
             }
             .conocenos {
                 flex-direction: row;
@@ -536,19 +577,39 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-layout">
+            
+            <div class="hero-split">
+                <!-- Lado Izquierdo: Logo -->
+                <div class="hero-left">
+                    <picture>
+                        <source srcset="Logo de reafirma-15.png">
+                        <img src="img/Logo de reafirma-15.png" alt="Logo Reafirma" class="hero-logo">
+                    </picture>
+                </div>
+                
+                <!-- Lado Derecho: Imagen Chicas -->
+                <div class="hero-right">
+                    <picture>
+                        <source srcset="CHICAS.png">
+                        <img src="img/CHICAS.png" alt="Chicas Reafirma" class="hero-chicas">
+                    </picture>
+                </div>
+            </div>
+
             <div class="hero-buttons">
                 <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
                 <a href="#experiencias" class="btn-outline">Servicios</a>
                 <a href="#conocenos" class="btn-outline">Conócenos</a>
             </div>
+            
         </div>
     </section>
 
-    <!-- CONÓCENOS SECTION (AHORA CON VIDEO EN BUCLE SIN AUDIO) -->
+    <!-- CONÓCENOS SECTION (CON EL VIDEO DE MISIÓN ASIGNADO) -->
     <section class="conocenos" id="conocenos">
         <video class="conocenos-img" autoplay muted loop playsinline>
-            <source src="VID-20250704-WA0159.mp4" type="video/mp4">
-            <source src="video/VID-20250704-WA0159.mp4" type="video/mp4">
+            <source src="VID-20240209-WA0029.mp4" type="video/mp4">
+            <source src="video/VID-20240209-WA0029.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
         <div class="conocenos-content">
@@ -560,7 +621,7 @@
         </div>
     </section>
 
-    <!-- MISIÓN SECTION (AHORA CON VIDEO EN BUCLE SIN AUDIO) -->
+    <!-- MISIÓN SECTION (CON NUEVO VIDEO DE EDICIÓN ASIGNADO) -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
@@ -570,8 +631,8 @@
             <p>Queremos que salgas renovada y lista para comerte el mundo de nuevo.</p>
         </div>
         <video class="mision-img" autoplay muted loop playsinline>
-            <source src="VID-20240209-WA0029.mp4" type="video/mp4">
-            <source src="video/VID-20240209-WA0029.mp4" type="video/mp4">
+            <source src="HnVideoEditor_2026_06_16_115230210.mp4" type="video/mp4">
+            <source src="video/HnVideoEditor_2026_06_16_115230210.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
     </section>
