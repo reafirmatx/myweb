@@ -49,71 +49,39 @@
             object-fit: cover;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO SECTION MODIFICADO (Imagen Completa de Fondo) --- */
         .hero {
-            background-color: var(--dark-bg);
+            /* Se aplica la nueva imagen abarcando toda la sección con un overlay oscuro premium */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('ChatGPT Image 15 jun 2026, 13_48_41.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        .hero-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .hero-title {
-            font-family: var(--font-serif);
-            color: var(--text-light);
-            font-size: 2.2rem;
-            letter-spacing: 5px;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-
-        .hero-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .hero-layout {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
-        }
-
-        /* Contenedor para alinear Logo Grande e Imagen Actual */
-        .hero-content-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 30px;
-            width: 100%;
-            margin-bottom: 35px;
+            flex-grow: 1;
         }
 
-        /* Ajuste de tamaño premium para el Logo Izquierdo */
-        .logo-hero-side {
+        /* Logo escalado y posicionado de lado izquierdo en Desktop */
+        .logo-hero-left {
             width: 100%;
-            max-width: 280px; /* Tamaño significativamente más grande */
+            max-width: 290px;
             height: auto;
             object-fit: contain;
-        }
-
-        .hero-image-container {
-            width: 100%;
-            max-width: 650px;
-            height: 350px;
-            overflow: hidden;
-            border-radius: 2px;
-        }
-
-        .hero-image-container img {
-            width: 100%;
-            height: 100%;
-            object-position: center 20%;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
         }
 
         .hero-buttons {
@@ -123,6 +91,8 @@
             justify-content: center;
             width: 100%;
             max-width: 600px;
+            margin-top: auto; /* Empuja los botones de forma estable al fondo del contenedor */
+            padding-top: 40px;
         }
 
         .btn-outline {
@@ -139,6 +109,7 @@
             transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
             text-align: center;
             min-width: 150px;
+            backdrop-filter: blur(4px); /* Suave efecto translúcido sobre el fondo */
         }
 
         .btn-outline:hover {
@@ -333,7 +304,7 @@
             font-weight: 600;
         }
 
-        /* --- NUEVA SECCIÓN CATÁLOGO CON IMAGEN RELATIVA --- */
+        /* --- SECCIÓN CATÁLOGO CON IMAGEN RELATIVA --- */
         .catalogo-section {
             background-color: var(--soft-gray);
             padding: 60px 20px;
@@ -439,24 +410,16 @@
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
-                padding: 50px;
+                padding: 60px 80px;
             }
-            .hero-title {
-                font-size: 3rem;
-            }
-            /* Alinear logo a la izquierda de la imagen actual */
-            .hero-content-wrapper {
+            /* Ubica el logotipo limpiamente a la izquierda en computadoras */
+            .hero-layout {
                 flex-direction: row;
-                justify-content: center;
                 align-items: center;
-                gap: 50px;
+                justify-content: flex-start;
             }
-            .logo-hero-side {
-                max-width: 340px; /* Mayor presencia visual en desktop */
-            }
-            .hero-image-container {
-                height: 440px;
-                flex: 1;
+            .logo-hero-left {
+                max-width: 360px; /* Escalado premium e imponente */
             }
             .conocenos {
                 flex-direction: row;
@@ -509,28 +472,18 @@
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION MODIFICADA -->
     <section class="hero">
-        <div class="hero-header">
-            <h1 class="hero-title">Reafirma Spa</h1>
+        <div class="hero-layout">
+            <!-- Logotipo oficial posicionado al lado izquierdo -->
+            <img class="logo-hero-left" src="Logo de reafirma-15.png" alt="Logo Reafirma Spa">
         </div>
         
-        <div class="hero-main">
-            <!-- Contenedor Flex: Logo Grande a la Izquierda + Imagen Actual a la Derecha -->
-            <div class="hero-content-wrapper">
-                <img class="logo-hero-side" src="Logo de reafirma-15.png" alt="Logo Grande Reafirma Spa">
-                
-                <div class="hero-image-container">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
-                </div>
-            </div>
-            
-            <!-- Botones Bajo el Bloque Visual -->
-            <div class="hero-buttons">
-                <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
-                <a href="#" onclick="abrirServiciosDetalle(event)" class="btn-outline">Servicios</a>
-                <a href="#conocenos" class="btn-outline">Conócenos</a>
-            </div>
+        <!-- Bloque de Botones alineados elegantemente abajo de la visual principal -->
+        <div class="hero-buttons">
+            <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
+            <a href="#" onclick="abrirServiciosDetalle(event)" class="btn-outline">Servicios</a>
+            <a href="#conocenos" class="btn-outline">Conócenos</a>
         </div>
     </section>
 
@@ -546,12 +499,11 @@
         </div>
     </section>
 
-    <!-- MISIÓN SECTION (TEXTO ACTUALIZADO) -->
+    <!-- MISIÓN SECTION -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
             <div class="divider-line"></div>
-            <!-- Nuevo Bloque de Copy Solicitado -->
             <p>Es que te sientas bien en tu piel, combinando tecnología avanzada con un toque personal para ofrecer resultados visibles.</p>
             <p>Nos enfocamos en tus necesidades, ya sea moldear tu figura, revitalizar tu rostro o aliviar tensiones.</p>
             <p>Queremos que salgas renovada y lista para mostrar tu mejor versión al mundo.</p>
@@ -615,7 +567,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO ACTUALIZADA CON RUTA RELATIVA -->
+    <!-- SECCIÓN CATÁLOGO ACTUALIZADA -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
             <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
@@ -707,7 +659,7 @@
                         <h1>Servicios Premium</h1>
                         
                         <h2>Tratamientos Faciales</h2>
-                        <p>Cuidar tu rostro es salud y un acto de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
+                        <p>Cuidar tu rostro es salud y un act de amor propio frente al desgaste diario. Aquí diseñamos rituales personalizados con alta tecnología que devuelven la firmeza y luminosidad natural a tu piel, logrando que te vuelvas a enamorar de tu reflejo.</p>
                         
                         <h2>Depilación (Láser y con Cera)</h2>
                         <p>Sentirte libre y cómoda en tu propia piel te aporta una inyección inmediata de seguridad diaria. Redefinimos esta experiencia con métodos suaves, eficaces y sin dolor que cuidan tu cuerpo para que te olvides por fin de las rutinas tediosas.</p>
