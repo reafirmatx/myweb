@@ -101,4 +101,517 @@
             font-family: var(--font-sans);
             font-size: 0.8rem;
             color: var(--text-light);
-            background:
+            background: transparent;
+            border: 1px solid var(--text-light);
+            padding: 12px 35px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-light);
+            color: var(--dark-bg);
+        }
+
+        /* --- CONÓCENOS SECTION --- */
+        .conocenos {
+            background-color: var(--primary-wine);
+            color: var(--text-light);
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .conocenos-img {
+            width: 100%;
+            height: 450px;
+        }
+
+        .conocenos-content {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title-italics {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1;
+        }
+
+        .conocenos-content p {
+            font-weight: 300;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        /* --- MISIÓN SECTION --- */
+        .mision {
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: var(--light-bg);
+        }
+
+        .mision-content {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .mision-title {
+            font-family: var(--font-serif);
+            color: var(--primary-wine);
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .mision-title span {
+            display: block;
+            font-style: italic;
+            text-transform: none;
+            font-weight: 300;
+            margin-top: -5px;
+        }
+
+        .divider-line {
+            width: 1px;
+            height: 60px;
+            background-color: var(--primary-wine);
+            margin: 25px 0;
+        }
+
+        .mision-content p {
+            font-size: 0.95rem;
+            color: var(--primary-wine);
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .mision-img {
+            width: 100%;
+            height: 500px;
+        }
+
+        /* --- BANNER FACIALES --- */
+        .banner-faciales {
+            position: relative;
+            height: 400px;
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .banner-title {
+            font-family: var(--font-serif);
+            color: var(--text-light);
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 300;
+        }
+
+        .banner-subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            max-width: 300px;
+            font-weight: 300;
+        }
+
+        .scroll-indicator {
+            align-self: flex-end;
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        /* --- SERVICIOS TABLE SECTION --- */
+        .servicios {
+            background-color: var(--primary-wine);
+            color: var(--text-light);
+            padding: 80px 20px;
+        }
+
+        .servicios-header {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .menu-servicios {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .categoria-col {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .item-servicio {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 8px;
+        }
+
+        .servicio-nombre {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .servicio-precio {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* --- CATALOGO MOCKUP --- */
+        .catalogo-section {
+            background-color: var(--soft-gray);
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .catalogo-container {
+            max-width: 800px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .mockup-book {
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            padding: 20px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .mockup-book .book-cover {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 60px 20px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- FOOTER / CONTACTO --- */
+        .footer-contacto {
+            background-color: var(--light-bg);
+            padding: 80px 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cta-col h2 {
+            font-family: var(--font-serif);
+            color: var(--primary-wine);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .cta-col h2 span {
+            display: block;
+            font-style: italic;
+            text-transform: none;
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-top: -5px;
+        }
+
+        .cta-col p {
+            margin: 25px 0 35px;
+            font-size: 0.95rem;
+            color: #555;
+            max-width: 400px;
+        }
+
+        /* BOTÓN DE CONTACTO ACTUALIZADO CON EFECTO HOVER AVANZADO */
+        .btn-fill {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            background-color: var(--primary-wine);
+            border: none;
+            padding: 15px 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-fill:hover {
+            background-color: #4a1a28; /* Un tono vino más profundo y sofisticado */
+            transform: translateY(-3px); /* Efecto sutil de elevación */
+            box-shadow: 0 10px 20px rgba(99, 37, 55, 0.3); /* Sombra suave con tono de la marca */
+            letter-spacing: 3px; /* Expansión sutil del texto al pasar el cursor */
+        }
+
+        .info-col {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .info-block h4 {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-wine);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-block p {
+            font-size: 0.95rem;
+            color: #555;
+            font-weight: 300;
+        }
+
+        /* --- MEDIA QUERIES (RESPONSIVE) --- */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 60px 40px;
+            }
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            .conocenos {
+                grid-template-columns: 1fr 1fr;
+            }
+            .conocenos-img {
+                height: 100%;
+                min-height: 600px;
+            }
+            .conocenos-content {
+                padding: 80px;
+            }
+            .mision {
+                grid-template-columns: 1fr 1fr;
+            }
+            .mision-img {
+                height: 100%;
+                min-height: 600px;
+            }
+            .mision-content {
+                padding: 80px;
+            }
+            .menu-servicios {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+            .footer-contacto {
+                grid-template-columns: 1.2fr 1fr;
+                gap: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-header">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 22C12 22 19 17 19 12C19 7 12 2 12 2C12 2 5 7 5 12C5 17 12 22 12 22Z"/>
+                <path d="M12 18C14.2091 18 16 16.2091 16 14C16 11.7909 14.2091 10 12 10C9.79086 10 8 11.7909 8 14C8 16.2091 9.79086 18 12 18Z"/>
+            </svg>
+            <h1 class="hero-title">Reafirma Spa</h1>
+        </div>
+        
+        <div class="hero-main">
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
+            </div>
+            <a href="#contacto" class="btn-outline">Conócenos</a>
+        </div>
+    </section>
+
+    <section class="conocenos">
+        <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
+        <div class="conocenos-content">
+            <h2 class="section-title-italics">Conócenos</h2>
+            <p>Aquí encontrarás un espacio donde reactivamos tus sentidos para conectar contigo misma.</p>
+            <p>Creamos experiencias personalizadas para asegurar que encuentres un momento lleno de energía positiva y calma, donde cada detalle esté pensado en ti.</p>
+            <p>Más que un centro de estética, somos tus aliadas en la búsqueda de la armonía, confianza y salud que multiplicará tu bienestar humano.</p>
+            <p>¡Es el momento ideal de regalarte la atención que mereces! Déjanos consentirte de la mano de expertas que se comprometen con cada mujer.</p>
+        </div>
+    </section>
+
+    <section class="mision">
+        <div class="mision-content">
+            <h2 class="mision-title">Nuestra <span>Misión</span></h2>
+            <div class="divider-line"></div>
+            <p>Brindar bienestar integral mente-cuerpo en un espacio seguro, sano y con un trato digno de ti.</p>
+            <p>Nos enfocamos en las necesidades reales de tu piel, tu cuerpo, estética y descanso.</p>
+            <p>Queremos que salgas renovada y lista para comerte el mundo de nuevo.</p>
+        </div>
+        <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
+    </section>
+
+    <section class="banner-faciales">
+        <div>
+            <h2 class="banner-title">Faciales</h2>
+            <p class="banner-subtitle">Sistemas personalizados para el cuidado y rejuvenecimiento de tu piel.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <section class="servicios">
+        <h2 class="servicios-header">Servicios de Belleza</h2>
+        
+        <div class="menu-servicios">
+            <div class="categoria-col">
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Limpieza Facial Profunda</span>
+                    <span class="servicio-precio">$45</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Hidratación Extrema</span>
+                    <span class="servicio-precio">$50</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Masaje Descontracturante</span>
+                    <span class="servicio-precio">$60</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Masaje Relajante</span>
+                    <span class="servicio-precio">$55</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Drenaje Linfático</span>
+                    <span class="servicio-precio">$65</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Depilación con Cera</span>
+                    <span class="servicio-precio">$25</span>
+                </div>
+            </div>
+
+            <div class="categoria-col">
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Manicura Premium</span>
+                    <span class="servicio-precio">$30</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Pedicura Spa</span>
+                    <span class="servicio-precio">$40</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Lifting de Pestañas</span>
+                    <span class="servicio-precio">$35</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Diseño de Cejas + Henna</span>
+                    <span class="servicio-precio">$20</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Tratamiento Anti-Edad</span>
+                    <span class="servicio-precio">$75</span>
+                </div>
+                <div class="item-servicio">
+                    <span class="servicio-nombre">Paquete Novias / Quinceañeras</span>
+                    <span class="servicio-precio">$120</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogo-section">
+        <div class="catalogo-container">
+            <div style="text-align: right; opacity: 0.6;">🌾</div>
+            
+            <div class="mockup-book">
+                <div class="book-cover">
+                    <span style="font-family: var(--font-serif); letter-spacing: 2px; font-size: 1.2rem;">REAFIRMA</span>
+                    <div style="font-size: 0.6rem; letter-spacing: 3px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; width: 60px;">CATÁLOGO</div>
+                </div>
+            </div>
+
+            <div style="text-align: left; opacity: 0.6;">🌿</div>
+        </div>
+    </section>
+
+    <footer class="footer-contacto" id="contacto">
+        <div class="cta-col">
+            <h2>Reserva tu <span>momento Reafirma</span></h2>
+            <p>¿Lista para escapar? Te estamos esperando. Contactanos y nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto..</p>
+            <a href="https://wa.link/ttnval" target="_blank" rel="noopener noreferrer" class="btn-fill">Contactar</a>
+        </div>
+        
+        <div class="info-col">
+            <div class="info-block">
+                <h4>Dirección</h4>
+                <p>Limites de Yancuitlalpan 218<br>Huamantla, Tlax.</p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Redes Sociales</h4>
+                <p>@reafirmaspa</p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Email</h4>
+                <p>helloreafirmatx@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
