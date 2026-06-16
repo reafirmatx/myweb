@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reafirma Spa - Conócenos</title>
+    <title>Reafirma Spa - Landing Page</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,11 +18,11 @@
             --soft-gray: #f9f6f7;
             --text-dark: #2d2d2d;
             --text-light: #ffffff;
-            --text-muted: #a6838d;
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Montserrat', sans-serif;
         }
 
+        /* Reset básico universal */
         * {
             margin: 0;
             padding: 0;
@@ -33,10 +35,12 @@
             background-color: var(--light-bg);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         img {
             max-width: 100%;
+            height: auto;
             display: block;
             object-fit: cover;
         }
@@ -50,25 +54,25 @@
             justify-content: space-between;
             align-items: center;
             padding: 40px 20px;
-            position: relative;
         }
 
         .hero-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .logo-icon {
-            width: 70px;
+            width: 60px;
+            height: 60px;
             margin: 0 auto 15px;
-            filter: invert(1);
+            display: block;
         }
 
         .hero-title {
             font-family: var(--font-serif);
             color: var(--text-light);
-            font-size: 2.5rem;
-            letter-spacing: 4px;
+            font-size: 2.2rem;
+            letter-spacing: 5px;
             font-weight: 300;
             text-transform: uppercase;
         }
@@ -77,18 +81,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 40px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 900px;
             margin: auto;
         }
 
         .hero-image-container {
             width: 100%;
-            max-width: 850px;
-            height: 50vh;
-            border-radius: 4px;
+            height: 350px;
             overflow: hidden;
+            border-radius: 2px;
+            margin-bottom: 30px;
         }
 
         .hero-image-container img {
@@ -103,13 +106,12 @@
             color: var(--text-light);
             background: transparent;
             border: 1px solid var(--text-light);
-            padding: 12px 35px;
+            padding: 12px 40px;
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            margin-top: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .btn-outline:hover {
@@ -121,31 +123,28 @@
         .conocenos {
             background-color: var(--primary-wine);
             color: var(--text-light);
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
         }
 
         .conocenos-img {
             width: 100%;
-            height: 450px;
+            height: 350px;
         }
 
         .conocenos-content {
-            padding: 60px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 600px;
+            padding: 50px 30px;
+            max-width: 550px;
             margin: 0 auto;
         }
 
         .section-title-italics {
             font-family: var(--font-serif);
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-style: italic;
             font-weight: 300;
             margin-bottom: 25px;
-            line-height: 1;
+            line-height: 1.1;
         }
 
         .conocenos-content p {
@@ -158,13 +157,13 @@
 
         /* --- MISIÓN SECTION --- */
         .mision {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column-reverse;
             background-color: var(--light-bg);
         }
 
         .mision-content {
-            padding: 60px 40px;
+            padding: 50px 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -177,7 +176,7 @@
         .mision-title {
             font-family: var(--font-serif);
             color: var(--primary-wine);
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             line-height: 1.1;
@@ -188,45 +187,42 @@
             font-style: italic;
             text-transform: none;
             font-weight: 300;
-            margin-top: -5px;
         }
 
         .divider-line {
             width: 1px;
-            height: 60px;
+            height: 50px;
             background-color: var(--primary-wine);
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         .mision-content p {
             font-size: 0.95rem;
             color: var(--primary-wine);
             margin-bottom: 15px;
-            font-weight: 400;
         }
 
         .mision-img {
             width: 100%;
-            height: 500px;
+            height: 350px;
         }
 
         /* --- BANNER FACIALES --- */
         .banner-faciales {
-            position: relative;
-            height: 400px;
-            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200');
+            height: 350px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200');
             background-size: cover;
             background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 40px;
+            padding: 40px 30px;
         }
 
         .banner-title {
             font-family: var(--font-serif);
             color: var(--text-light);
-            font-size: 3rem;
+            font-size: 2.8rem;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 300;
@@ -237,50 +233,51 @@
             font-size: 0.9rem;
             max-width: 300px;
             font-weight: 300;
+            margin-top: 10px;
         }
 
         .scroll-indicator {
             align-self: flex-end;
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             border: 1px solid var(--text-light);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-light);
-            font-size: 0.8rem;
         }
 
         /* --- SERVICIOS TABLE SECTION --- */
         .servicios {
             background-color: var(--primary-wine);
             color: var(--text-light);
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
 
         .servicios-header {
             text-align: center;
             font-family: var(--font-serif);
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-weight: 300;
         }
 
         .menu-servicios {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .categoria-col {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
+            width: 100%;
         }
 
         .item-servicio {
@@ -288,7 +285,7 @@
             justify-content: space-between;
             align-items: flex-end;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         .servicio-nombre {
@@ -296,6 +293,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 400;
+            padding-right: 10px;
         }
 
         .servicio-precio {
@@ -307,34 +305,31 @@
         /* --- CATALOGO MOCKUP --- */
         .catalogo-section {
             background-color: var(--soft-gray);
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 60px 20px;
         }
 
         .catalogo-container {
-            max-width: 800px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr 1fr;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         .mockup-book {
             background-color: #fff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            padding: 20px;
-            text-align: center;
-            border-radius: 2px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 15px;
+            width: 100%;
+            max-width: 280px;
         }
 
         .mockup-book .book-cover {
             background-color: var(--dark-bg);
             color: white;
-            padding: 60px 20px;
-            height: 350px;
+            padding: 40px 20px;
+            height: 320px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -344,20 +339,20 @@
         /* --- FOOTER / CONTACTO --- */
         .footer-contacto {
             background-color: var(--light-bg);
-            padding: 80px 40px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-            max-width: 1200px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .cta-col h2 {
             font-family: var(--font-serif);
             color: var(--primary-wine);
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             line-height: 1.1;
         }
 
@@ -365,46 +360,44 @@
             display: block;
             font-style: italic;
             text-transform: none;
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 300;
-            margin-top: -5px;
         }
 
         .cta-col p {
-            margin: 25px 0 35px;
+            margin: 20px 0 30px;
             font-size: 0.95rem;
             color: #555;
-            max-width: 400px;
         }
 
-        /* BOTÓN DE CONTACTO ACTUALIZADO CON EFECTO HOVER AVANZADO */
+        /* Botón de WhatsApp con Hover Fluido */
         .btn-fill {
             font-family: var(--font-sans);
             font-size: 0.85rem;
             color: var(--text-light);
             background-color: var(--primary-wine);
             border: none;
-            padding: 15px 40px;
+            padding: 15px 45px;
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 12px rgba(99, 37, 55, 0.15);
+            transition: all 0.3s ease-in-out;
         }
 
         .btn-fill:hover {
-            background-color: #4a1a28; /* Un tono vino más profundo y sofisticado */
-            transform: translateY(-3px); /* Efecto sutil de elevación */
-            box-shadow: 0 10px 20px rgba(99, 37, 55, 0.3); /* Sombra suave con tono de la marca */
-            letter-spacing: 3px; /* Expansión sutil del texto al pasar el cursor */
+            background-color: #4a1a28; 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(99, 37, 55, 0.3); 
+            letter-spacing: 3px; 
         }
 
         .info-col {
             display: flex;
             flex-direction: column;
-            gap: 35px;
+            gap: 30px;
         }
 
         .info-block h4 {
@@ -413,7 +406,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--primary-wine);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
         }
 
@@ -423,50 +416,73 @@
             font-weight: 300;
         }
 
-        /* --- MEDIA QUERIES (RESPONSIVE) --- */
+        /* --- MEDIA QUERIES (ESCRITORIO / TABLETS) --- */
         @media (min-width: 768px) {
             .hero {
-                padding: 60px 40px;
+                padding: 50px;
             }
             .hero-title {
-                font-size: 3.5rem;
+                font-size: 3rem;
+            }
+            .hero-image-container {
+                height: 480px;
             }
             .conocenos {
-                grid-template-columns: 1fr 1fr;
+                flex-direction: row;
             }
             .conocenos-img {
-                height: 100%;
-                min-height: 600px;
+                width: 50%;
+                height: auto;
+                min-height: 550px;
             }
             .conocenos-content {
-                padding: 80px;
+                width: 50%;
+                padding: 60px;
+                align-self: center;
             }
             .mision {
-                grid-template-columns: 1fr 1fr;
+                flex-direction: row;
             }
             .mision-img {
-                height: 100%;
-                min-height: 600px;
+                width: 50%;
+                height: auto;
+                min-height: 550px;
             }
             .mision-content {
-                padding: 80px;
+                width: 50%;
+                padding: 60px;
+            }
+            .banner-faciales {
+                height: 450px;
+                padding: 60px;
             }
             .menu-servicios {
-                grid-template-columns: 1fr 1fr;
-                gap: 60px;
+                flex-direction: row;
+                gap: 50px;
             }
             .footer-contacto {
-                grid-template-columns: 1.2fr 1fr;
-                gap: 100px;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 80px;
+                padding: 80px 40px;
+            }
+            .cta-col {
+                flex: 1.2;
+            }
+            .info-col {
+                flex: 1;
+                padding-top: 15px;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-header">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <!-- Icono de Logotipo Minimalista -->
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1">
                 <path d="M12 22C12 22 19 17 19 12C19 7 12 2 12 2C12 2 5 7 5 12C5 17 12 22 12 22Z"/>
                 <path d="M12 18C14.2091 18 16 16.2091 16 14C16 11.7909 14.2091 10 12 10C9.79086 10 8 11.7909 8 14C8 16.2091 9.79086 18 12 18Z"/>
             </svg>
@@ -475,13 +491,16 @@
         
         <div class="hero-main">
             <div class="hero-image-container">
+                <!-- Puedes cambiar esta URL por tu archivo local "conocenos.jpg" si deseas usarlo aquí -->
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200" alt="Equipo Reafirma Spa">
             </div>
             <a href="#contacto" class="btn-outline">Conócenos</a>
         </div>
     </section>
 
+    <!-- CONÓCENOS SECTION -->
     <section class="conocenos">
+        <!-- Reemplaza el src por "conocenos.jpg" si quieres cargar la imagen local directamente -->
         <img class="conocenos-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800" alt="Tratamiento Facial Reafirma">
         <div class="conocenos-content">
             <h2 class="section-title-italics">Conócenos</h2>
@@ -492,6 +511,7 @@
         </div>
     </section>
 
+    <!-- MISIÓN SECTION -->
     <section class="mision">
         <div class="mision-content">
             <h2 class="mision-title">Nuestra <span>Misión</span></h2>
@@ -503,6 +523,7 @@
         <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
     </section>
 
+    <!-- BANNER FACIALES -->
     <section class="banner-faciales">
         <div>
             <h2 class="banner-title">Faciales</h2>
@@ -513,10 +534,12 @@
         </div>
     </section>
 
+    <!-- SERVICIOS TABLE SECTION -->
     <section class="servicios">
         <h2 class="servicios-header">Servicios de Belleza</h2>
         
         <div class="menu-servicios">
+            <!-- Bloque Izquierdo -->
             <div class="categoria-col">
                 <div class="item-servicio">
                     <span class="servicio-nombre">Limpieza Facial Profunda</span>
@@ -534,16 +557,9 @@
                     <span class="servicio-nombre">Masaje Relajante</span>
                     <span class="servicio-precio">$55</span>
                 </div>
-                <div class="item-servicio">
-                    <span class="servicio-nombre">Drenaje Linfático</span>
-                    <span class="servicio-precio">$65</span>
-                </div>
-                <div class="item-servicio">
-                    <span class="servicio-nombre">Depilación con Cera</span>
-                    <span class="servicio-precio">$25</span>
-                </div>
             </div>
 
+            <!-- Bloque Derecho -->
             <div class="categoria-col">
                 <div class="item-servicio">
                     <span class="servicio-nombre">Manicura Premium</span>
@@ -558,40 +574,32 @@
                     <span class="servicio-precio">$35</span>
                 </div>
                 <div class="item-servicio">
-                    <span class="servicio-nombre">Diseño de Cejas + Henna</span>
-                    <span class="servicio-precio">$20</span>
-                </div>
-                <div class="item-servicio">
                     <span class="servicio-nombre">Tratamiento Anti-Edad</span>
                     <span class="servicio-precio">$75</span>
                 </div>
-                <div class="item-servicio">
-                    <span class="servicio-nombre">Paquete Novias / Quinceañeras</span>
-                    <span class="servicio-precio">$120</span>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- CATALOGO MOCKUP SECTION -->
     <section class="catalogo-section">
         <div class="catalogo-container">
-            <div style="text-align: right; opacity: 0.6;">🌾</div>
-            
+            <div style="opacity: 0.5; font-size: 1.2rem;">🌾</div>
             <div class="mockup-book">
                 <div class="book-cover">
-                    <span style="font-family: var(--font-serif); letter-spacing: 2px; font-size: 1.2rem;">REAFIRMA</span>
-                    <div style="font-size: 0.6rem; letter-spacing: 3px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 10px; width: 60px;">CATÁLOGO</div>
+                    <span style="font-family: var(--font-serif); letter-spacing: 2px; font-size: 1.1rem;">REAFIRMA</span>
+                    <div style="font-size: 0.6rem; letter-spacing: 3px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 8px; width: 65px; text-align: center;">CATÁLOGO</div>
                 </div>
             </div>
-
-            <div style="text-align: left; opacity: 0.6;">🌿</div>
+            <div style="opacity: 0.5; font-size: 1.2rem;">🌿</div>
         </div>
     </section>
 
+    <!-- FOOTER / CONTACTO -->
     <footer class="footer-contacto" id="contacto">
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
-            <p>¿Lista para escapar? Te estamos esperando. Llama, envía un mensaje de texto o haz clic abajo; nosotros te ayudaremos a encontrar el momento ideal para tu visita.</p>
+            <p>¿Lista para escapar? Te estamos esperando. Llama, envía un mensaje de texto o haz clic abajo; nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto.</p>
             <a href="https://wa.link/ttnval" target="_blank" rel="noopener noreferrer" class="btn-fill">Contactar</a>
         </div>
         
