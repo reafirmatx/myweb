@@ -70,15 +70,6 @@
             flex-direction: column;
             align-items: center; 
             justify-content: center;
-            gap: 25px; 
-        }
-
-        .logo-hero-left {
-            width: 100%;
-            max-width: 290px;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.35));
         }
 
         .hero-buttons {
@@ -204,11 +195,11 @@
             height: 350px;
         }
 
-        /* --- SECCIÓN VIDEO REEMPLAZANDO A FACIALES (SIN TEXTOS) --- */
+        /* --- SECCIÓN VIDEO --- */
         .video-container-section {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* Relación de aspecto 16:9 Cinema */
+            padding-top: 56.25%; 
             background-color: #000;
         }
 
@@ -221,7 +212,7 @@
             border: 0;
         }
 
-        /* --- NUEVA SECCIÓN: DETALLES DE SERVICIOS INTEGRADA --- */
+        /* --- DETALLES DE SERVICIOS INTEGRADA --- */
         .servicios-detalles {
             background-color: var(--soft-gray);
             padding: 80px 20px 40px;
@@ -320,7 +311,7 @@
             font-weight: 600;
         }
 
-        /* --- SECCIÓN CATÁLOGO (AGRANDADA) --- */
+        /* --- SECCIÓN CATÁLOGO --- */
         .catalogo-section {
             background-color: var(--soft-gray);
             padding: 80px 20px;
@@ -330,7 +321,7 @@
         }
 
         .catalogo-container-new {
-            max-width: 950px; /* Tamaño mockup ampliado para mayor impacto visual */
+            max-width: 950px; 
             width: 100%;
             display: flex;
             justify-content: center;
@@ -377,6 +368,7 @@
             font-size: 0.95rem;
             color: #444;
             font-weight: 300;
+            white-space: pre-line; /* Mantiene el salto de línea solicitado */
         }
 
         .btn-fill {
@@ -423,20 +415,57 @@
             font-weight: 300;
         }
 
+        /* --- CONTROL DE AUDIO FLOTANTE --- */
+        .audio-player-widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(92, 37, 56, 0.3);
+            padding: 10px 16px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .audio-btn {
+            background: var(--primary-wine);
+            border: none;
+            color: var(--text-light);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+
+        .audio-text {
+            font-size: 0.68rem;
+            font-family: var(--font-sans);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary-wine);
+            font-weight: 500;
+        }
+
         /* --- MEDIA QUERIES (RESPONSIVO ESCRITORIO) --- */
         @media (min-width: 768px) {
             .hero {
                 padding: 60px 100px;
             }
             .hero-layout {
-                align-items: flex-start;
+                align-items: center; /* Centrado absoluto al no tener logo */
                 justify-content: center;
             }
-            .logo-hero-left {
-                max-width: 350px; 
-            }
             .hero-buttons {
-                justify-content: flex-start;
+                justify-content: center;
             }
             .conocenos {
                 flex-direction: row;
@@ -489,14 +518,24 @@
 </head>
 <body>
 
+    <!-- CONTROL DE AUDIO FLOTANTE -->
+    <div class="audio-player-widget">
+        <button class="audio-btn" id="audioToggle" onclick="toggleAudio()">▶</button>
+        <span class="audio-text">Música de fondo</span>
+    </div>
+
+    <!-- AUDIO ELEMENT -->
+    <audio id="bg-audio" loop>
+        <source src="Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
+        <source src="audio/Timeless Blues and SoulDust on My BootsSmooth & Moving Music Inspired by Etta James.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-layout">
-            <img class="logo-hero-left" src="Logo de reafirma-15.png" alt="Logo Reafirma Spa">
-            
             <div class="hero-buttons">
                 <a href="https://maps.app.goo.gl/g8Ti7CnUJci4GzkTA" target="_blank" rel="noopener noreferrer" class="btn-outline">Ubicación</a>
-                <!-- El botón ahora apunta al ID interno de la sección de detalles -->
                 <a href="#experiencias" class="btn-outline">Servicios</a>
                 <a href="#conocenos" class="btn-outline">Conócenos</a>
             </div>
@@ -527,7 +566,7 @@
         <img class="mision-img" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800" alt="Perfil Estética Bienestar">
     </section>
 
-    <!-- SECCIÓN DE VÍDEO (REEMPLAZA SECCIÓN FACIALES Y NO TIENE TEXTOS) -->
+    <!-- SECCIÓN DE VÍDEO -->
     <section class="video-container-section">
         <iframe 
             src="https://www.youtube.com/embed/ZOlPzpTOv1E?autoplay=1&mute=1&loop=1&playlist=ZOlPzpTOv1E&controls=1&rel=0" 
@@ -537,7 +576,7 @@
         </iframe>
     </section>
 
-    <!-- NUEVA SECCIÓN INTEGRADA: DETALLES ANTES DE LA TABLA DE PRECIOS -->
+    <!-- DETALLES ANTES DE LA TABLA DE PRECIOS -->
     <section class="servicios-detalles" id="experiencias">
         <div class="servicios-detalles-container">
             <h2 class="servicios-detalles-header">Servicios Premium</h2>
@@ -616,7 +655,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO (AGRANDADA) -->
+    <!-- SECCIÓN CATÁLOGO -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
             <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
@@ -627,7 +666,8 @@
     <footer class="footer-contacto" id="contacto">
         <div class="cta-col">
             <h2>Reserva tu <span>momento Reafirma</span></h2>
-            <p>¿Lista para escapar? Te estamos esperando. Llama, envía un mensaje de texto o haz clic abajo; nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto.</p>
+            <p>¿Listo para escapar? Te estamos esperando.
+Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a encontrar el momento ideal para tu visita y nos aseguraremos de que todo esté perfecto.</p>
             <a href="https://wa.link/ttnval" target="_blank" rel="noopener noreferrer" class="btn-fill">Contactar</a>
         </div>
         
@@ -648,6 +688,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT PARA CONTROLAR EL AUDIO -->
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("bg-audio");
+            var btn = document.getElementById("audioToggle");
+            if (audio.paused) {
+                audio.play();
+                btn.innerText = "⏸";
+            } else {
+                audio.pause();
+                btn.innerText = "▶";
+            }
+        }
+    </script>
 
 </body>
 </html>
