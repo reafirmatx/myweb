@@ -86,7 +86,7 @@
             align-items: center;
         }
 
-        /* Proporción aumentada un 20% (Base: 260px -> Nueva: 312px) */
+        /* Proporción móvil para el logo */
         .hero-logo {
             max-width: 312px;
             width: 100%;
@@ -94,7 +94,7 @@
             object-fit: contain;
         }
 
-        /* Proporción aumentada un 20% (Base: 42vh -> Nueva: 50.4vh) */
+        /* Proporción móvil para las chicas */
         .hero-chicas {
             max-width: 100%;
             max-height: 50.4vh; 
@@ -537,7 +537,6 @@
             pointer-events: auto;
         }
 
-        /* Paleta inspirada artísticamente en el cielo celestial de image_dc3bee.jpg */
         .modal-magic-content {
             background: radial-gradient(circle at top, #e3edff 0%, #fdf0e6 45%, #fadcd5 85%, #f2e6ff 100%);
             padding: 50px 40px;
@@ -641,14 +640,15 @@
                 width: 50%;
                 flex: 0 0 50%;
             }
-            /* Escalado de escritorio aumentado un 20% (Base: 440px -> Nueva: 528px) */
             .hero-logo {
                 max-width: 528px; 
                 width: 90%;
             }
-            /* Escalado de escritorio aumentado un 20% (Base: 60vh -> Nueva: 72vh) */
+            /* Imagen de las chicas optimizada y notablemente más grande en computadora */
             .hero-chicas {
-                max-height: 72vh;
+                max-height: 82vh; 
+                max-width: 620px;
+                width: 100%;
             }
             .hero-buttons {
                 margin-top: 10px;
@@ -722,7 +722,7 @@
         <div class="hero-layout">
             
             <div class="hero-split">
-                <!-- Lado Izquierdo: Logo ampliado -->
+                <!-- Lado Izquierdo: Logo -->
                 <div class="hero-left">
                     <picture>
                         <source srcset="logo.png">
@@ -730,7 +730,7 @@
                     </picture>
                 </div>
                 
-                <!-- Lado Derecho: Imagen Chicas ampliada -->
+                <!-- Lado Derecho: Imagen Chicas (Tamaño ampliado para escritorio) -->
                 <div class="hero-right">
                     <picture>
                         <source srcset="CHICAS.png">
@@ -869,11 +869,11 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO -->
+    <!-- SECCIÓN CATÁLOGO (ENLACE DE DRIVE ACTUALIZADO) -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
             <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-fill">Ver catálogo</a>
+            <a href="https://drive.google.com/file/d/10O8t_k56qIa6_7TABT3TB69_089o_Zl9/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-fill">Ver catálogo</a>
         </div>
     </section>
 
@@ -894,7 +894,6 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
             
             <div class="info-block">
                 <h4>Redes Sociales</h4>
-                <!-- Botón solicitado enlazado a tu Instagram -->
                 <a href="http://instagram.com/reafirmaspa/" target="_blank" rel="noopener noreferrer" class="btn-social-ig">@reafirmaspa</a>
             </div>
             
@@ -958,7 +957,7 @@ Llama, envía un mensaje de texto en el link de abajo, nosotros te ayudaremos a 
                 });
             }
 
-            // Desparador exacto de 3 segundos para el Modal
+            // Temporizador automático de 3 segundos para la ventana emergente
             setTimeout(function() {
                 var modal = document.getElementById('magicModal');
                 if (modal) {
