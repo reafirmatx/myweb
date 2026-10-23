@@ -367,6 +367,11 @@
             height: auto;
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        .catalogo-img:hover {
+            transform: scale(1.01);
         }
 
         /* --- FOOTER / CONTACTO --- */
@@ -644,11 +649,12 @@
                 max-width: 528px; 
                 width: 90%;
             }
-            /* Imagen de las chicas optimizada y notablemente más grande en computadora */
+            /* Imagen de las chicas a gran escala y dominante en computadora */
             .hero-chicas {
-                max-height: 82vh; 
-                max-width: 620px;
+                max-height: 88vh; 
                 width: 100%;
+                max-width: 100%;
+                object-fit: contain;
             }
             .hero-buttons {
                 margin-top: 10px;
@@ -730,7 +736,7 @@
                     </picture>
                 </div>
                 
-                <!-- Lado Derecho: Imagen Chicas (Tamaño ampliado para escritorio) -->
+                <!-- Lado Derecho: Imagen Chicas (Ampliada en escritorio) -->
                 <div class="hero-right">
                     <picture>
                         <source srcset="CHICAS.png">
@@ -869,10 +875,12 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO (ENLACE DE DRIVE ACTUALIZADO) -->
+    <!-- SECCIÓN CATÁLOGO (ENLACE DE DRIVE DIRECTO EN IMAGEN Y BOTÓN) -->
     <section class="catalogo-section">
         <div class="catalogo-container-new">
-            <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
+            <a href="https://drive.google.com/file/d/10O8t_k56qIa6_7TABT3TB69_089o_Zl9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <img class="catalogo-img" src="Diseño sin título (3).png" alt="Catálogo Reafirma Spa">
+            </a>
             <a href="https://drive.google.com/file/d/10O8t_k56qIa6_7TABT3TB69_089o_Zl9/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-fill">Ver catálogo</a>
         </div>
     </section>
